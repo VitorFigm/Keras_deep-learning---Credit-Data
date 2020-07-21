@@ -1,5 +1,6 @@
-from base import *
+import pandas as pd
 import numpy as np
+credit_Data = pd.read_csv('credit_data.csv')
 #preprocessing
 from sklearn.impute import SimpleImputer
 X = SimpleImputer().fit_transform(credit_Data.drop(['c#default','i#clientid'],1))
